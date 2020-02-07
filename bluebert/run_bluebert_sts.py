@@ -191,8 +191,6 @@ class StsProcessor(DataProcessor):
 
     def get_train_examples(self, data_dir):
         """See base class."""
-        print(data_dir)
-        print(os.path.join(data_dir, "train.tsv"))
         return self._create_examples(
             self._read_tsv(os.path.join(data_dir, "train.tsv")), "train")
 
@@ -626,6 +624,7 @@ def main(_):
     num_train_steps = None
     num_warmup_steps = None
     if FLAGS.do_train:
+        print(FLAGS.data_dir)
         train_examples = processor.get_train_examples(FLAGS.data_dir)
         num_train_steps = int(
             len(train_examples) / FLAGS.train_batch_size * FLAGS.num_train_epochs)
