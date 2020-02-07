@@ -1,0 +1,13 @@
+python bluebert/run_bluebert_sts.py \
+  --task_name='sts' \
+  --do_train=true \
+  --do_eval=false \
+  --do_test=true \
+  --vocab_file=model_data/mimic_base/vocab.txt \
+  --bert_config_file=model_data/mimic_base/bert_config.json \
+  --init_checkpoint=model_data/mimic_base/bert_model.ckpt \
+  --max_seq_length=128 \
+  --num_train_epochs=30.0 \
+  --do_lower_case=true \
+  --data_dir=data/BIOSSES \
+  --output_dir=output
