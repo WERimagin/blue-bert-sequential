@@ -439,6 +439,9 @@ def model_fn_builder(bert_config, init_checkpoint, learning_rate,
             (assignment_map,
              initialized_variable_names) = modeling.get_assignment_map_from_checkpoint(
                 tvars, init_checkpoint)
+            print("****")
+            print("****")
+            print("****")
             print(assignment_map)
             if use_tpu:
 
@@ -740,8 +743,4 @@ if __name__ == "__main__":
     flags.mark_flag_as_required("vocab_file")
     flags.mark_flag_as_required("bert_config_file")
     flags.mark_flag_as_required("output_dir")
-    print(FLAGS.output_dir)
-    print(FLAGS.do_lower_case)
-    print(FLAGS.vocab_file)
-    print(FLAGS.data_dir)
     tf.app.run()
