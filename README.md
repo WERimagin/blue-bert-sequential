@@ -1,5 +1,7 @@
 # BlueBERT
 
+## This is the copy from original repository.
+
 [![HitCount](https://hits.dwyl.com/ncbi-nlp/NCBI_BERT.svg)](https://hits.dwyl.com/ncbi-nlp/NCBI_BERT)
 
 **\*\*\*\*\* New Dec 5th, 2019: NCBI_BERT is renamed to BlueBERT \*\*\*\*\***
