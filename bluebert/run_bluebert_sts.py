@@ -743,4 +743,5 @@ if __name__ == "__main__":
     print(FLAGS.output_dir)
     print(FLAGS.do_lower_case)
     print(FLAGS.vocab_file)
+    print(FLAGS.data_dir)
     tf.app.run()
