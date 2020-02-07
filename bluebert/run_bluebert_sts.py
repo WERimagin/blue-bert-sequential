@@ -407,7 +407,8 @@ def create_model(bert_config, is_training, input_ids, input_mask, segment_ids,
 
         return (loss, per_example_loss, logits)
 
-
+#model_fuilder
+#functionを返してる
 def model_fn_builder(bert_config, init_checkpoint, learning_rate,
                      num_train_steps, num_warmup_steps, use_tpu,
                      use_one_hot_embeddings):
@@ -513,9 +514,6 @@ def model_fn_builder(bert_config, init_checkpoint, learning_rate,
 
         return output_spec
 
-    for i in range(50):
-        print("*")
-    print(type(model_fn))
     return model_fn
 
 

@@ -260,7 +260,7 @@ class DDI2013Processor(BlueBERTProcessor):
 class I2b2_2010_Processor(BlueBERTProcessor):
     def get_labels(self):
         return ['PIP', 'TeCP', 'TeRP', 'TrAP', 'TrCP', 'TrIP', 'TrNAP', 'TrWP', 'false']
-    
+
 
 class MedNLIProcessor(DataProcessor):
     def get_train_examples(self, data_dir):
@@ -576,6 +576,7 @@ def model_fn_builder(bert_config, num_labels, init_checkpoint, learning_rate,
         if init_checkpoint:
             (assignment_map, initialized_variable_names
              ) = modeling.get_assignment_map_from_checkpoint(tvars, init_checkpoint)
+             print(assignment_map)
             if use_tpu:
 
                 def tpu_scaffold():
