@@ -513,6 +513,9 @@ def model_fn_builder(bert_config, init_checkpoint, learning_rate,
 
         return output_spec
 
+    for i in range(50):
+        print("*")
+    print(type(model_fn))
     return model_fn
 
 
