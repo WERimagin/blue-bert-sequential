@@ -741,4 +741,6 @@ if __name__ == "__main__":
     flags.mark_flag_as_required("bert_config_file")
     flags.mark_flag_as_required("output_dir")
     print(FLAGS.output_dir)
+    print(FLAGS.do_lower_case)
+    print(FLAGS.vocab_file)
     tf.app.run()
